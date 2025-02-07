@@ -1,8 +1,7 @@
 <?php
 session_start();
-// require 'db.php'; 
+require 'db.php'; 
 
-// Vérification CSRF
 $token = bin2hex(random_bytes(32)); 
 $_SESSION['csrf_token'] = $token;
 
@@ -10,7 +9,6 @@ $message = '';
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Vérification du token CSRF
     if (isset($_POST['csrf_token']) && $_POST['csrf_token'] === $_SESSION['csrf_token']) {
         
         $nom = htmlspecialchars($_POST['nom']);
@@ -21,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!$nom || !$email || !$sujet || !$message_content) {
             $error = "Tous les champs sont requis, et l'email doit être valide.";
         } else {
-            // Traitement du formulaire (envoi par email, enregistrement en base, etc.)
             $to = "exemple@gmail.com";
             $subject = "Nouveau message de contact : $sujet";
             $body = "Nom: $nom\nEmail: $email\n\n$message_content";
