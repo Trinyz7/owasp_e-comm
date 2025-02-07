@@ -1,0 +1,214 @@
+/* --- Style général du site --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #18bc9c;
+}
+
+main {
+    padding: 30px;
+    background-color: white;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- Section d'introduction --- */
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.intro p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* --- Section produits --- */
+.products {
+    margin-top: 30px;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 15px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #777;
+    margin: 10px 0;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #18bc9c;
+    margin: 10px 0;
+}
+
+.product-card .btn {
+    padding: 12px 20px;
+    background-color: #18bc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.product-card .btn:hover {
+    background-color: #16a085;
+}
+
+/* --- Section de contact --- */
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-intro h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.contact-intro p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* --- Formulaire de contact --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #18bc9c;
+}
+
+.contact-form button {
+    padding: 14px;
+    background-color: #18bc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.contact-form button:hover {
+    background-color: #16a085;
+}
+
+/* --- Messages de succès et d'erreur --- */
+.success {
+    color: green;
+    background-color: #e7f7e7;
+    padding: 10px;
+    border: 1px solid green;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+    background-color: #f7e7e7;
+    padding: 10px;
+    border: 1px solid red;
+    margin-bottom: 20px;
+}
+
+
+
+/* --- Footer --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
